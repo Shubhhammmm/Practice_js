@@ -1,0 +1,32 @@
+<!-- //asynchronous javascript and XML wwe can make fast and dynamics -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+</head>
+<body>
+    <p id="demo">Here i am learning how to load data.</p>
+    <button onclick="loadData()">Click</button>
+
+</body>
+
+<Script>
+    function loadData(){
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function(){
+            if(this.readyState == 4 && this.status == 200){
+                console.log(this.responseText);
+                // document.getElementById('demo').innerHTML = this.responseText;
+            }
+        }
+        
+
+
+       xhttp.open('GET','https://jsonplaceholder.typicode.com/posts',true)
+       xhttp.send()
+    }
+</Script>
+</html>

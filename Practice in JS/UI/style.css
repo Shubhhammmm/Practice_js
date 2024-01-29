@@ -1,0 +1,92 @@
+body{
+    margin: 0px;
+    padding: 50px 0px 0px;
+    padding-top: 0px;
+    box-sizing: border-box;
+    display: grid;
+    background-color: rgb(201, 194, 194);
+    grid-template-areas: 
+    
+    "header header header header"
+    "nav nav  nav"
+    "main main aside"
+    "footer footer footer";
+    
+}
+
+header{
+    background-color: white;
+    text-align: center;
+    padding: 0px;
+    grid-area: "header";
+
+}
+header p {
+    margin: 10px;
+    background-color: white;
+}
+nav{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    grid-area: "nav";
+
+}
+nav a{
+    margin: 3px;
+    color: white;
+    text-decoration: none;
+}
+
+.outer_div{
+    display: flex;
+    height: 520px;
+}
+
+main{
+    flex-basis: 80%;
+    
+    /* padding: 30px; */
+    margin-top: 1px;
+    grid-area: "main";
+    justify-content: space-between;
+}
+.heading{
+    margin: 5px;
+    height: 235px;
+    background-color: #fff;
+    
+}
+
+aside{
+    flex-basis: 27%;
+    grid-area: "aside";
+}
+.about{
+    background-color: #fff;
+    margin: 8px 3px;
+    padding: 3px;
+}
+.popular{
+    background-color: #fff;
+    margin: 8px 3px;
+    padding: 3px; 
+}
+.follow{
+    background-color: #fff;
+    margin: 8px 3px;
+    padding: 3px;
+}
+
+footer{
+    background-color: gray;
+    text-align: center;
+    margin: 5px;
+    grid-area: "footer";
+}
+
+/* img{
+    background-color: red;
+    height: 40px;
+    width: 40px;
+} */

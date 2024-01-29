@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Html & CSS practice</h1>
+    <div style="display: none;" >I am Display None</div>
+    <div style="visibility: hidden;" >I am Visibility Hidden</div>
+
+    <h5 style="padding: 2px;" >Padding</h5>
+     <h5 style="margin: 2px;" >Margin</h5>   
+
+     <h4>Pseudo Classes </h4>
+     <!-- <label for="chech"></label> -->
+     <input type="checkbox" name="check" id="check" onclick="getStatus()">Loved It
+
+     <div>
+        parent
+        <div> 
+            Child
+            <div onclick="getClicked()" id="grandChild" >
+                Grand Child
+
+            </div>
+        </div>
+     </div>
+
+     <script>
+
+        function getStatus(){
+            if(document.getElementById("check").checked){
+                console.log("Checked");
+            }
+            else{
+                console.log("not checked");
+            }
+        }
+
+        function getClicked(){
+        let a =     document.getElementById("grandChild")
+
+        a.addEventListener("click" ,() =>{
+            console.log("clicked");
+        })
+            
+        }
+         
+
+     </script>
+</body>
+</html>
